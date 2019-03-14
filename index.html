@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>milkmilklemonade</title>
+  </head>
+
+  <body onload="poopingGuy()">
+
+    <h1>§pΣr…⌡ª©k£r(｡◕‿‿◕).δÇ⌂╘↕ⁿα†º╓</h1>
+
+    <div id="scale-criteria">
+      <div class="encompass" id="tuning-div">
+        <h6>Tuning</h6>
+        <div id="presets">
+          <select class="preset-dd" id="preset-dd" title="Presets currently available only for 6 strings.  Tuning based on presently selected open bass note.
+
+ex. set 6th string to note 'C' prior to selecting 'Open' preset to display Open C Tuning.">
+            <!--<option id="preset-dd-label" disabled>Tuning Presets</option>-->
+          </select>
+        </div>
+        <div id="strings">
+          <select id="string-6" title="6th String"></select>
+          <select id="string-5" title="5th String"></select>
+          <select id="string-4" title="4th String"></select>
+          <select id="string-3" title="3rd String"></select>
+          <select id="string-2" title="2nd String"></select>
+          <select id="string-1" title="1st String"></select>
+          <a href="#" onclick="addString(); return false;" class="brackets icon_add" title="Add String">+</a>
+          <a href="#" onclick="removeString(); return false;" class="brackets" title="Remove String">−</a>
+          <p title="Tune all strings down one half step."><a href="#" onclick="lowerAllStringsHalfStep(); return false;"><i class="arrow down"></i></a></p>
+          <p title="Tune all strings up one half step."><a href="#" onclick="raiseAllStringsHalfStep(); return false;"><i class="arrow up"></i></a></p>
+        </div>
+
+      </div>
+
+
+      <div class="encompass" id="key-div">
+        <h6>Key</h6>
+        <div id="key-dropdown">
+          <select id="key-dd"></select>
+        </div>
+      </div>
+
+      <div class="encompass">
+        <h6>Scale</h6>
+        <div id="scale-dropdown">
+          <select id="scale-dd"></select>
+        </div>
+      </div>
+
+      <div>
+        <button class="borderless" id="generate" onclick="generateDiagram()">Generate!</button>
+      </div>
+    </div>
+
+    <div class="container" id="scale-container">
+      <span style="white-space: pre-line; font-family: 'Courier New'; font-weight: bold;">
+        <div id="scale-tab">
+
+        </div>
+      </span>
+    </div>
+
+    <div class="container" id="dot-legend">
+      <div class="legend-item" id="root-legend" onmouseover="showNote(this)">
+        <div class="dot" style="background: black; bottom: 0;"></div>
+        <div class="dot-label" id="root-label">root</div>
+      </div>
+      <div class="legend-item" id="third-legend" onmouseover="showNote(this)">
+        <div class="dot" style="background: white; bottom: 0;"></div>
+        <div class="dot-label" id="third-label">third</div>
+      </div>
+      <div class="legend-item" id="fifth-legend" onmouseover="showNote(this)">
+        <div class="dot" style="background: hsl(195, 72%, 84%); bottom: 0;"></div>
+        <div class="dot-label" id="fifth-label">fifth</div>
+      </div>
+    </div>
+
+    <script>
+
+    </script>
+
+    <script src="js\main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
